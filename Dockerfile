@@ -15,4 +15,6 @@ ADD cronjob.txt /app
 RUN chmod 0644 /app/cronjob.txt
 RUN crontab /app/cronjob.txt
 
+RUN node scrape-progress.js
+
 CMD ["/app/start.sh"]
