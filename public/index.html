@@ -48,10 +48,11 @@
     </body>
 
     <script>
-        const progress = document.getElementById("progress");
+        const progressbar = document.getElementById("progress");
         fetch("./data.json").then(async response => {
             const data = await response.json();
-            progress.innerHTML = data.progress;
+            const progress = data.progress / 40 * 100;
+            progressbar.innerHTML = progress;
         });
     </script>
 

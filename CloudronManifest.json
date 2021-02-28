@@ -5,7 +5,7 @@
 	"addons": {
 		"localstorage": {},
 		"scheduler": {
-			"scrape-progress": {
+			"scrape_progress": {
 				"schedule": "0 * * * *",
 				"command": "node /app/data/scrape-progress.js"
 			}
