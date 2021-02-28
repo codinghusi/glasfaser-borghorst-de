@@ -3,7 +3,13 @@
 	"healthCheckPath": "/",
 	"httpPort": 3000,
 	"addons": {
-		"localstorage": {}
+		"localstorage": {},
+		"scheduler": {
+			"scrape-progress": {
+				"schedule": "0 * * * *",
+				"command": "node /app/data/scrape-progress.js"
+			}
+		}
 	},
 	"manifestVersion": 2
 }
