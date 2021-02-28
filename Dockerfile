@@ -1,11 +1,11 @@
-FROM node:latest
+FROM cloudron/base:3.0.0
 
 RUN apt-get update && apt-get -y install -qq --force-yes cron
 
 RUN mkdir -p /app/public
 
 WORKDIR /app
-ADD package.json scrape-progress.js /app/
+ADD package.json scrape-progress.js serve.js start.sh /app/
 
 ADD public/index.html public/style.css /app/public/
 
@@ -15,4 +15,4 @@ ADD cronjob.txt /app
 RUN chmod 0644 /app/cronjob.txt
 RUN crontab /app/cronjob.txt
 
-CMD ["node", "/app/serve.js"]
+CMD ["/app/start.sh"]
