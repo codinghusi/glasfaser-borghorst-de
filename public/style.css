@@ -4,30 +4,28 @@
 }
 
 html, body {
-    font-family: Calibri, 'sans-serif';
-    width: 50vw;
-    /* background-color: var(--color-blue); */
-    margin: 0 auto !important;
+    /* height: 100%; */
+    height: 100%;
+    margin: 0 !important;
     padding: 0 !important;
 }
 
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Calibri, 'sans-serif';
+    background: linear-gradient(59deg, rgba(18,167,228,1) 0%, rgba(21,169,230,1) 100%); }
+
 #page {
-    background-color: white;
-    box-shadow: #888 0 0 1rem;
-    min-height: 100vh
 }
 
 #body {
-    padding: 0 2rem;
 }
 
 h1, h2, h3 {
-    text-align: center;
 }
 
 .headline {
-    background-color: var(--color-yellow);
-    padding: 1rem;
 }
 
 .button {
@@ -48,17 +46,34 @@ h1, h2, h3 {
 }
 
 .info {
-    position: relative;
-    background-color: var(--color-blue);
-    padding: 1.2rem .7rem .7rem .7rem;
 }
 
 .info::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 1rem;
-    background-color: rgba(0, 0, 0, .2);
+}
+
+
+.progress-border {
+    border-radius: 4px;
+    background: #12a7e4;
+    box-shadow: inset 8px 8px 16px #1096cd,
+                inset -8px -8px 16px #14b8fb;
+    width: 30rem;
+    padding: .5rem;
+}
+
+.progress-inside {
+    border-radius: 4px;
+    background: #12a7e4;
+    box-shadow:  8px 8px 16px #1096cd,
+    -8px -8px 16px #14b8fb;
+    height: 3rem;
+    padding: .5rem;
+}
+
+.progress-bar {
+    border-radius: 4px;
+    background: linear-gradient(59deg, rgba(252,196,84,1) 0%, rgba(255,176,18,1) 57%, rgba(252,196,84,1) 100%);     /* background: #fcc454; */
+    box-shadow: 0 0 1rem #999999;
+    width: 60%;
+    height: 100%;
 }
