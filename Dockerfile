@@ -1,6 +1,6 @@
 FROM cloudron/base:3.0.0
 
-RUN apt-get update && apt-get -y install -qq --force-yes cron
+RUN apt-get update && apt-get -y install -qq --force-yes cron && apt-get -y install -qq --force-yes git
 
 RUN mkdir -p /app/public
 
