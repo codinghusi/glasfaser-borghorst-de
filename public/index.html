@@ -45,7 +45,7 @@
 
     <script>
         const progress = document.getElementById("progress");
-        fetch("./data.json", async response => {
+        fetch("./data.json").then(async response => {
             const data = await response.json();
             progress.innerHTML = data.progress;
         });
