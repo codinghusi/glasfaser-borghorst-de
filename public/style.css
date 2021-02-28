@@ -1,0 +1,9 @@
+html, body {
+    font-family: Calibri, 'sans-serif';
+    margin: auto;
+    width: 50vw;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}

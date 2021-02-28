@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Glasfaser für Borghorst</title>
+        <meta charset="utf-8" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <h1>Glasfaser für Borghorst</h1>
+
+        <p class="info">
+            <strong>Hintergrund:</strong> <br />
+            Wir können jetzt alle Glasfaser in Borghorst bekommen. <br />
+            Dafür müssen sich 40 Prozent der Haushalte in Borghorst für <strong>Glasfaser Deutschland</strong> bis zum 31. März entscheiden!
+            Die Preise gehen ab 45 Euro pro Monat los.
+        </p>
+
+        <br />
+        <br />
+        <h2>Eine 400k Leitung bedeutet...</h2>
+        <ul>
+            <li>... Youtube, Netflix, Skypen und Homeoffice gleichzeitig</li>
+            <li>... keine Verzögerung bei Skype-Gesprächen</li>
+            <li>... extrem schnelle Downloads</li>
+            <li>... einen kostenlosen Glasfaseranschluss direkt am Haus</li>
+            <li>... Steigerung des Werts der Immobilie</li>
+            <li>... einfacher Wechsel, ohne Unterbrechung und keine doppelten Kosten</li>
+            <li>... 1000k im ersten Jahr</li>
+            <li>... Telefonflat</li>
+            <li>... nur 50 Euro im Monat</li>
+            <li>... zukunftsfähig</li>
+        </ul>
+
+        <p>Fortschritt: <span id="progress"></span> %</p>
+
+        <p>Bist du dabei und machst Borghorst zukunftsfähig?</p>
+
+        <a href="https://www.deutsche-glasfaser.de/tarife/">
+            Hier Anmelden
+        </a>
+
+    </body>
+
+    <script>
+        const progress = document.getElementById("progress");
+        fetch("./data.json", async response => {
+            const data = await response.json();
+            progress.innerHTML = data.progress;
+        });
+    </script>
+
+    <script async src="https://analytic.r4nd0.de/tracker.js" data-ackee-server="https://analytic.r4nd0.de" data-ackee-domain-id="7a9d34c4-f93e-4c57-8d15-e7082379ea49"></script>
+
+</html>
