@@ -8,8 +8,10 @@ WORKDIR /app
 ADD package.json scrape-progress.js /app/
 ADD index.html style.css /app/public/
 
-ADD cronjob.txt /app
 RUN npm install
+
+ADD cronjob.txt /app
+RUN chmod 0644 /app/cronjob.txt
 RUN crontab /app/cronjob.txt
 
-CMD ["node /app/serve.js"]
+CMD ["node", "/app/serve.js"]
