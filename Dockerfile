@@ -6,7 +6,8 @@ RUN mkdir -p /app/public
 
 WORKDIR /app
 ADD package.json scrape-progress.js /app/
-ADD index.html style.css /app/public/
+
+ADD public/index.html public/style.css /app/public/
 
 RUN npm install
 
