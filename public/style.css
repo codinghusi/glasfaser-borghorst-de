@@ -1,9 +1,26 @@
+:root {
+    --color-blue: #12a7e4;
+    --color-yellow: #fcc454;
+}
+
 html, body {
     font-family: Calibri, 'sans-serif';
     margin: auto;
     width: 50vw;
 }
 
+#page {
+    background-color: var(--color-blue);
+    padding: 1rem;
+    margin: 0;
+}
+
 h1, h2, h3 {
     text-align: center;
+}
+
+.headline {
+    background-color: var(--color-yellow);
+    padding: 1rem;
+    margin: 0;
 }
