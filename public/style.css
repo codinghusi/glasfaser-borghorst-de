@@ -31,7 +31,7 @@ html, body {
 
 h1, h2, h3 {
     text-align: center;
-    font-family: 'source sans pro';
+    font-family: 'source sans pro', 'open sans', Calibri;
 }
 
 h1 {
