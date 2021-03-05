@@ -64,8 +64,8 @@
     </body>
 
     <script>
-        const progressbar = document.getElementById("progress");
-        const progressText = document.getElementById("progressbar-text");
+        const progressbar = document.querySelector(".progress");
+        const progressText = document.querySelector(".progressbar-text");
         fetch("./data.json").then(async response => {
             const data = await response.json();
             const progress = data.progress;
