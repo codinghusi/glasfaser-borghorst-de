@@ -47,7 +47,7 @@
                                 <span class="progress-text">21%</span>
                             </div>
                         </div>
-                        <span class="progressbar-goal">40%</span>
+                        <span class="progressbar-goal">Ziel: 40%</span>
                     </div>
                 </section>
 
@@ -69,7 +69,7 @@
         fetch("./data.json").then(async response => {
             const data = await response.json();
             const progress = data.progress;
-            const progress40 = progress / 40 * 100
+            const progress40 = Math.min(100, progress / 40 * 100);
             progressbar.style.width = `${progress40}%`;
             progressText.innerHTML = `${progress} %`;
         });
