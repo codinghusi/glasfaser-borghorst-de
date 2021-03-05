@@ -134,7 +134,7 @@ section li {
 }
 
 
-#section1 h2 {
+#section-body1 h2 {
     text-align: left;
 }
 
@@ -162,8 +162,16 @@ section li {
         padding: 0 1rem;
     }
 
-    .row {
+    #section1 .row {
         flex-wrap: wrap;
+    }
+
+    h1 {
+        font-size: 30pt;
+    }
+
+    h2 {
+        font-size: 20pt;
     }
 
     .our-imgs {
