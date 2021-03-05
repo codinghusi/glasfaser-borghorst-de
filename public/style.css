@@ -3,19 +3,18 @@
     --color-yellow: #fcc454;
 }
 
-html, body {
-    font-family: 'open sans', Calibri;
-    font-size: 16pt;
-    width: 37.5rem;
-    margin: 0 auto !important;
-    padding: 0 !important;
+em {
+    font-size: 15.6pt;
 }
 
-@media screen and (max-width: 700px) {
-    html, body {
-        width: 100vw;
-        max-width: 100vw;
-    }
+html, body {
+    font-family: 'open sans', Calibri;
+    font-size: 16.5pt;
+    /* width: 100vw; */
+    width: 1200px;
+    /* padding: 3rem; */
+    margin: 0 auto !important;
+    padding: 0 !important;
 }
 
 #page {
@@ -25,7 +24,9 @@ html, body {
 }
 
 #body {
-    padding: 0 2rem;
+    margin: auto;
+    padding: 0 5rem;
+    /* width: 33rem; */
 }
 
 h1, h2, h3 {
@@ -34,11 +35,11 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 26pt;
+    font-size: 56pt;
 }
 
 h2 {
-    font-size: 20pt;
+    font-size: 27pt;
 }
 
 .header {
@@ -66,6 +67,7 @@ section li {
 }
 
 .button {
+    display: inline-block;
     position: relative;
     margin: 1rem;
     border-radius: 3px;
@@ -77,10 +79,6 @@ section li {
     font-weight: bold;
 }
 
-a {
-    margin: 2rem;
-}
-
 .align-center {
     text-align: center;
 }
@@ -89,6 +87,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: auto;
 }
 
 .progressbar {
@@ -113,3 +112,64 @@ a {
 }
 
 
+.our-imgs {
+    display: flex;
+    flex-direction: row;
+    margin-right: 3rem;
+}
+
+.our-imgs img {
+    width: 5rem;
+    height: auto;
+    margin: 0 .2rem;
+    border-radius: 5px;
+}
+
+.our-imgs img:nth-child(odd) {
+    margin-top: 1rem;
+}
+
+.our-imgs img:nth-child(even) {
+    margin-bottom: 1rem;
+}
+
+
+#section1 h2 {
+    text-align: left;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--color-blue);
+    padding: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    html, body {
+        width: 100vw;
+    }
+    
+    #body {
+        padding: 0 1rem;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .our-imgs {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+}
