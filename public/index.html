@@ -9,50 +9,64 @@
 
     <body>
         <div id="page">
-            <h1 class="headline">Glasfaser für Borghorst</h1>
+            <div class="header">
+                <h1> Glasfaser für Borghorst </h1>
+                <h2> eine Initiative für digitale Zukunftsfähigkeit </h2>
+            </div>
             <div id="body">
-                <p class="info">
-                    <strong>Hintergrund:</strong> <br />
-                    Wir können jetzt alle Glasfaser in Borghorst bekommen. <br />
-                    Dafür müssen sich 40 Prozent der Haushalte in Borghorst für <strong>Glasfaser Deutschland</strong> bis zum 31. März entscheiden!
-                    Die Preise gehen ab 45 Euro pro Monat los.
-                </p>
+                <section>
+                    <h2>worum geht es?</h2>
+                    <em>Bis zum <strong>31.03.2021</strong> können sich Borghorster Haushalte bei der Deutschen Glasfaser für einen <strong>Glasfaseranschluss</strong> registrieren</em>
+                    <p>Wir - Gerrit, Patrick und Teresa - möchten uns dafür einsetzen, dass sich mindestens <strong>40 % der Haushalte</strong> unserer Heimatstadt sich für einen Anschluss entscheiden, denn dann wird der Anschluss <strong>kostenlos</strong> vorgenommen.</p>
+                </section>
 
-                <br />
-                <br />
-                <h2>Eine 400k Leitung bedeutet...</h2>
-                <ul>
-                    <li>... Youtube, Netflix, Skypen und Homeoffice gleichzeitig</li>
-                    <li>... keine Verzögerung bei Skype-Gesprächen</li>
-                    <li>... extrem schnelle Downloads</li>
-                    <li>... einen kostenlosen Glasfaseranschluss direkt am Haus</li>
-                    <li>... Steigerung des Werts der Immobilie</li>
-                    <li>... einfacher Wechsel, ohne Unterbrechung und keine doppelten Kosten</li>
-                    <li>... 1000k im ersten Jahr</li>
-                    <li>... Telefonflat</li>
-                    <li>... nur 50 Euro im Monat</li>
-                    <li>... zukunftsfähig</li>
-                </ul>
+                <section>
+                    <h2>was spricht dafür?</h2>
+                    <ul>
+                        <li>Glasfaser heißt schnelles und stabiles Internet  und ist gerade für uns jungen Menschen im ländlichen Raum von wachsender Bedeutung  - beruflich wie privat</li>
+                        <li>ein Glasfaseranschluss erwirkt  eine enorme Wertsteigerung Ihrer Immobilie</li>
+                        <li>ein Anschluss jetzt bedeutet die Vermeidung von hohen Anschlusskosten im Nachhinein (mindestens 750€ je Anschluss)</li>
+                    </ul>
+                </section>
 
-                <p>Fortschritt: <span id="progress"></span> %</p>
+                <section>
+                    <h2>aktueller Stand:</h2>
+                    <div class="row">
+                        <div class="progressbar">
+                            <div class="progress" data-progress="21">
+                                <span class="progress-text">21%</span>
+                            </div>
+                        </div>
+                        <span class="progressbar-goal">40%</span>
+                    </div>
+                </section>
 
-                <p>Bist du dabei und machst Borghorst zukunftsfähig?</p>
-
-                <div class="center-box">
-                    <a href="https://www.deutsche-glasfaser.de/tarife/" class="button">
-                        Hier Anmelden
-                    </a>
-                </div>
+                <section class="align-center">
+                    <h2>wie gehts?</h2>
+                    <p>für einen Anschluss registrieren</p>
+                    <a href="https://www.deutsche-glasfaser.de/tarife/" class="button">Auf gehts!</a>
+                    <br />
+                    <div>
+                        Zur Beratung steht Ihnen die Deutsche Glasfaser zur Verfügung: <br />
+                        Servicepunkt Borghorst <br />
+                        Münsterstr. 50, 48565 Steinfurt <br />
+                        Mo/Fr 10-13h + 14-18h <br />
+                        Mi 12-15h + 15.30 - 18h <br />
+                    </div>
+                </section>
             </div>
         </div>
     </body>
 
     <script>
         const progressbar = document.getElementById("progress");
+        const progressText = document.getElementById("progressbar-text");
         fetch("./data.json").then(async response => {
             const data = await response.json();
-            const progress = data.progress / 40 * 100;
-            progressbar.innerHTML = progress;
+            const progress = data.progress;
+            const progress40 = progress / 40 * 100
+            progressbar.style.width = `${progress40}px`;
+            progressText.innerHTML = `${progress} %`;
         });
     </script>
 
