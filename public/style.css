@@ -93,8 +93,8 @@ section li {
 .progressbar {
     height: 3rem;
     width: 80%;
-    background-color: #ddd;
-    border: 2px solid black;
+    background-color: #dadada;
+    border: 1px solid black;
 }
 
 .progressbar .progress {
@@ -108,6 +108,7 @@ section li {
     background-color: var(--color-blue);
     background-image: repeating-linear-gradient(-45deg, transparent, transparent 15px, rgba(255,255,255,.5) 15px, rgba(255,255,255,.5) 30px);
     border-right: 1px solid black;
+    box-shadow: 0 0 5px #555;
 }
 
 .progressbar .progress-text {
